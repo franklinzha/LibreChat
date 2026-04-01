@@ -38,3 +38,24 @@ endpoints:
       headers:
         "HTTP-Referer": "https://librechat-klml.onrender.com"
         "X-Title": "LibreChat"
+
+    - name: "OpenRouter 图片生成"
+      apiKey: "${OPENROUTER_API_KEY}"
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default:
+          - "black-forest-labs/flux-2-klein-4b"
+          - "black-forest-labs/flux-2-max"
+          - "black-forest-labs/flux-2-pro"
+          - "black-forest-labs/flux-2-flex"
+          - "bytedance-seed/seedream-4-5"
+        fetch: false
+      titleConvo: false
+      dropParams:
+        - "stop"
+        - "temperature"
+        - "frequency_penalty"
+        - "presence_penalty"
+      headers:
+        "HTTP-Referer": "https://librechat-klml.onrender.com"
+        "X-Title": "LibreChat"
