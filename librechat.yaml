@@ -1,0 +1,40 @@
+version: 1.0.8
+cache: true
+
+endpoints:
+  custom:
+    - name: "OpenRouter"
+      apiKey: "${OPENROUTER_API_KEY}"
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default:
+          - "stepfun-ai/step-3-5-flash:free"
+          - "arcee-ai/arcee-trinity-large-preview:free"
+          - "liquid/lfm2-5-1-2b-thinking:free"
+          - "liquid/lfm2-5-1-2b-instruct:free"
+          - "nvidia/nemotron-3-nano-30b-a3b:free"
+          - "arcee-ai/arcee-trinity-mini:free"
+          - "nvidia/nemotron-nano-12b-2-vl:free"
+          - "qwen/qwen3-next-80b-a3b-instruct:free"
+          - "nvidia/nemotron-nano-9b-v2:free"
+          - "openai/gpt-oss-120b:free"
+          - "openai/gpt-oss-20b:free"
+          - "z-ai/glm-4-5-air:free"
+          - "qwen/qwen3-coder-480b-a35b:free"
+          - "venice-ai/venice-uncensored:free"
+          - "google/gemma-3n-2b-it:free"
+          - "google/gemma-3n-e4b-it:free"
+          - "google/gemma-3-4b-it:free"
+          - "google/gemma-3-12b-it:free"
+          - "google/gemma-3-27b-it:free"
+          - "meta-llama/llama-3.3-70b-instruct:free"
+          - "meta-llama/llama-3.2-3b-instruct:free"
+          - "nousresearch/hermes-3-llama-3.1-405b:free"
+        fetch: false
+      titleConvo: true
+      titleModel: "meta-llama/llama-3.3-70b-instruct:free"
+      dropParams:
+        - "stop"
+      headers:
+        "HTTP-Referer": "https://librechat-klml.onrender.com"
+        "X-Title": "LibreChat"
