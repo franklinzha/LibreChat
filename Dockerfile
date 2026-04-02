@@ -40,28 +40,6 @@ RUN \
     npm ci --no-audit
 
 COPY --chown=node:node . .
-# 强制创建 librechat.yaml
-RUN printf '%s\n' \
-  'version: 1.3.6' \
-  'cache: true' \
-  '' \
-  'endpoints:' \
-  '  custom:' \
-  '    - name: "OpenRouter"' \
-  '      apiKey: "${OPENROUTER_KEY}"' \
-  '      baseURL: "https://openrouter.ai/api/v1"' \
-  '      models:' \
-  '        default:' \
-  '          - "meta-llama/llama-3.3-70b-instruct:free"' \
-  '          - "google/gemma-3-27b-it:free"' \
-  '          - "qwen/qwen3-coder-480b-a35b:free"' \
-  '        fetch: true' \
-  '      titleConvo: true' \
-  '      titleModel: "meta-llama/llama-3.3-70b-instruct:free"' \
-  '      dropParams:' \
-  '        - "stop"' \
-  > /app/librechat.yaml
-
 
 RUN \
     # React client build with configurable memory
