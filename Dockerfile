@@ -40,6 +40,8 @@ RUN \
     npm ci --no-audit
 
 COPY --chown=node:node . .
+RUN ls -la /app/librechat.yaml || echo "FILE NOT FOUND"
+
 
 RUN \
     # React client build with configurable memory
