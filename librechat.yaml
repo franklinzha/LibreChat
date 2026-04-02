@@ -9,6 +9,7 @@ endpoints:
       baseURL: "https://openrouter.ai/api/v1"
       models:
         default:
+          - "openrouter/free"
           - "stepfun/step-3.5-flash:free"
           - "arcee-ai/arcee-trinity-large-preview:free"
           - "liquid/lfm2-5-1-2b-thinking:free"
