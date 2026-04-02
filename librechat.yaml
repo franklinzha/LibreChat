@@ -44,7 +44,7 @@ endpoints:
         "X-Title": "LibreChat"
 
     - name: "OpenRouter 图片生成"
-      apiKey: "${OPENROUTER_API_KEY}"
+      apiKey: "${OPENROUTER_KEY}"
       baseURL: "https://openrouter.ai/api/v1"
       models:
         default:
